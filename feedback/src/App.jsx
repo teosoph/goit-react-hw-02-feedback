@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import FeedbackOptions from './Components/FeedbackOptions';
 import Statistics from './Components/Statistics';
 
 
@@ -54,9 +55,8 @@ class App extends Component {
       // 
       <div >
 
-        {/* <FeedbackOptions options={} onLeaveFeedback={}>. */}
+        <FeedbackOptions options={objKeys} onLeaveFeedback={onBtnClick()} />
         
-        </div>
 
 
         <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />

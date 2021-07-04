@@ -1,26 +1,41 @@
-import React, { Component } from 'react';
+import  { Component } from 'react';
 
 
-class FeedbackOptions extends Component {
+export default  class FeedbackOptions extends Component {
     
-    render() { 
-        const { options, onLeaveFeedback } = this.props
-        return (      
-            <h1>    Please leave feedback </h1>
-            <div>
-                
-          {objKeys.map(objKey => (
+  const { options, onLeaveFeedback } = this.props
+  
+render() {
+  return (
+    
+    <h1>    Please leave feedback </h1>
+    
+        <div>
+        
+          {options.map
+          
+          (objKey => 
+          (
             <button
-              className='button'
               type="button"
               key={objKey}
-              onClick={this.onBtnClick(objKey)}
-            >              {objKey}
-            </button>)}
+              onClick={onLeaveFeedback(objKey)}
+            > 
+                         {objKey}
+            </button>
+            
+            ))
+          }
+            
+            
 
-        </div>
-
+        </div >
+        
         )
-    }
-}
-export default FeedbackOptions
+
+
+
+}}
+  
+  
+
