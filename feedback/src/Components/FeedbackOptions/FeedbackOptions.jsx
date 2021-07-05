@@ -1,41 +1,20 @@
-import  { Component } from 'react';
+
+const FeedbackOptions = ({ options, onLeaveFeedback }) =>
+  <div>
+    {options.map(option => (
+      <button
+        type="button"
+        key={option}
+        onClick={onLeaveFeedback(option)}
+      >
+        {option}
+      </button>))}
+  </div>
 
 
-export default  class FeedbackOptions extends Component {
-    
-  const { options, onLeaveFeedback } = this.props
-  
-render() {
-  return (
-    
-    <h1>    Please leave feedback </h1>
-    
-        <div>
-        
-          {options.map
-          
-          (objKey => 
-          (
-            <button
-              type="button"
-              key={objKey}
-              onClick={onLeaveFeedback(objKey)}
-            > 
-                         {objKey}
-            </button>
-            
-            ))
-          }
-            
-            
-
-        </div >
-        
-        )
+export default FeedbackOptions
 
 
 
-}}
-  
-  
+
 
