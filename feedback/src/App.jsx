@@ -51,7 +51,7 @@ class App extends Component {
         
         <FeedbackOptions
           options={objKeys}
-          onLeaveFeedback={this.onBtnClick()} />
+          onLeaveFeedback={this.onBtnClick} />
         
         <Statistics
           good={good}
