@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import FeedbackOptions from './Components/FeedbackOptions';
+import FeedbackOptions from './Components/FeedbackOptions/';
 import Statistics from './Components/Statistics';
 
 
@@ -30,10 +30,10 @@ class App extends Component {
   // Count Positive feedbacks function 
   countPositiveFeedbackPercentage = () => {
     const positiveFeedbacks = this.state['good']
-    console.log(positiveFeedbacks);
+    // console.log(positiveFeedbacks);
 
     const totalPositiveFeedbacks = Math.round((positiveFeedbacks / this.countTotalFeedback()) * 100)
-    console.log(totalPositiveFeedbacks);
+    // console.log(totalPositiveFeedbacks);
 
     return (totalPositiveFeedbacks)
   }
@@ -51,7 +51,7 @@ class App extends Component {
         
         <FeedbackOptions
           options={objKeys}
-          onLeaveFeedback={this.onBtnClick()} />
+          onLeaveFeedback={this.onBtnClick} />
         
         <Statistics
           good={good}

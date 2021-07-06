@@ -1,6 +1,9 @@
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) =>
-  <div>
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
+  
+  return (
+  
+    <div>
     {options.map(option => (
       <button
         type="button"
@@ -10,9 +13,10 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) =>
         {option}
       </button>))}
   </div>
+    )
+}
 
 
-export default FeedbackOptions
 
 
 
