@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Section from './Components/Section/';
 import FeedbackOptions from './Components/FeedbackOptions/';
 import Statistics from './Components/Statistics';
 
@@ -43,16 +44,19 @@ class App extends Component {
     const objKeys = Object.keys(this.state);
 
     return (
-      // Создай компонент <Section title="">, который рендерит секцию с заголовком и детей (children). Оберни каждый из <Statistics> и <FeedbackOptions> в созданный компонент секции.
-          <div >
-        <h1>
-          Please leave feedback
-          </h1>
+  
+       <section>
         
+      <Section title={'Please leave feedback'}>
+
         <FeedbackOptions
           options={objKeys}
           onLeaveFeedback={this.onBtnClick} />
-        
+
+      </Section>
+
+        <Section title={'Statistic'}>
+
         <Statistics
           good={good}
           neutral={neutral}
@@ -60,7 +64,9 @@ class App extends Component {
           total={this.countTotalFeedback()}
           positivePercentage={this.countPositiveFeedbackPercentage()} />
 
-      </div>
+      </Section>
+       </section>
+
 
     );
   }
