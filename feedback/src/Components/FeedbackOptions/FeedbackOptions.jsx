@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
+import styles from '../../App.css';
+
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   
   return (
   
-    <div>
+    <div className={styles.buttons}
+>
     {options.map(option => (
       <button
         type="button"

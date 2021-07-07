@@ -5,9 +5,7 @@ import FeedbackOptions from './Components/FeedbackOptions/';
 import Statistics from './Components/Statistics';
 import Notification from './Components/Notification';
 
-
-
-import './App.css';
+// import styles from './App.css';
 
 class App extends Component {
 
@@ -48,11 +46,11 @@ class App extends Component {
 
     return (
   
-        <section>
+      <section >
         
-      <Section title={'Please leave feedback'}>
+        <Section  title={'Please leave feedback'}>
 
-        <FeedbackOptions
+          <FeedbackOptions 
           options={objKeys}
           onLeaveFeedback={this.onBtnClick} />
 

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
 
-        <ul >
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
+        
+        <ul>
             {/* Statistic indicators */}
             <li >Good: {good}</li>
             <li >Neutral: {neutral}</li>
@@ -11,7 +12,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
 
             {/* Statistic methods */}
             <li >Total: {total} </li>
-            <li >Positive feedbacks: {positivePercentage} %</li>
+        <li id="blink6" >Positive feedbacks: {positivePercentage} %</li>
         </ul>
 
 export default Statistics
